@@ -1,0 +1,50 @@
+//color variable declaration
+$header-bgcolor : rgba(0, 0, 0, 0.274);
+$main-bgcolor: rgba(233, 72, 72, 0.406);
+$footer-bgcolor: rgb(128, 215, 128);
+$para-font: 20px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: $header-bgcolor;
+}
+
+nav {
+    margin-top: 10px;
+    ul {
+        list-style-type: none;
+        li  {
+            display: inline-block;
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: aliceblue;
+                transition: 0.7s;
+                border-radius: 6px;
+                padding: 15px;
+            }
+            a:hover{
+                background-color: rgb(11, 11, 11);
+            }
+        }
+    }
+}
+
+
+
+main {
+    background-color: $main-bgcolor;
+}
+
+#about p {
+    font-size: $para-font;
+}
+
+footer {
+    background-color: $footer-bgcolor;
+}
