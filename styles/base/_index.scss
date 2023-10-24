@@ -1,0 +1,4 @@
+// @forward is used to split our styles into separate files or modules and make them available for import in other Sass files.
+
+@forward "./reset";
+@forward "./type";

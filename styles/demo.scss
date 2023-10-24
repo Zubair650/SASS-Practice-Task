@@ -1,14 +1,11 @@
-//color variable declaration
+// @forward is used to split our styles into separate files or modules and make them available for import in other Sass files.
+@forward "./base/index";
+
+// color variable declaration
 $header-bgcolor : rgba(0, 0, 0, 0.274);
 $main-bgcolor: rgba(233, 72, 72, 0.406);
 $footer-bgcolor: rgb(128, 215, 128);
 $para-font: 20px;
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 header {
     background-color: $header-bgcolor;
