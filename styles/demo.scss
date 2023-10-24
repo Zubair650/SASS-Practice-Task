@@ -8,7 +8,7 @@
 @mixin para-style($size, $style) {
     font-size: $size;
     text-align: $style;
-    margin: 0px;
+    margin: 0px 0 0 10px;
 }
 
 #about {
@@ -57,6 +57,30 @@ nav {
             }
         }
     }
+}
+
+.btn {
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    border-radius: 4px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+@mixin btn-style($bg-color) {
+    background-color: $bg-color;
+}
+
+.btn-download {
+    // @extend directive in Sass is used to share a set of CSS properties from one selector to another.
+    @extend .btn;
+    @include btn-style(rgb(34, 126, 34))
+}
+
+.btn-learn {
+    @extend .btn;
+    @include btn-style(brown)
 }
 
 footer {
