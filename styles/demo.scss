@@ -4,7 +4,31 @@
 // @use rule loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together.
 @use "./util/index" as variable;
 
-// color variable declaration
+// @mixin is used to define reusable blocks of styles that can be included in other parts of our stylesheet using the @include directive.
+@mixin para-style($size, $style) {
+    font-size: $size;
+    text-align: $style;
+    margin: 0px;
+}
+
+#about {
+    background-color: variable.$about-bgcolor;
+}
+
+#about p {
+    font-size: variable.$para-font;
+    // @include in Sass is used to include the styles from a mixin into a selector or another mixin.
+    @include para-style(18px, left);
+}
+
+#education {
+    background-color: variable.$edu-bgcolor;
+}
+
+#education p {
+    font-size: variable.$para-font;
+    @include para-style(22px, justify);
+}
 
 header {
     background-color: variable.$header-bgcolor;
@@ -33,16 +57,6 @@ nav {
             }
         }
     }
-}
-
-
-
-main {
-    background-color: variable.$main-bgcolor;
-}
-
-#about p {
-    font-size: variable.$para-font;
 }
 
 footer {
