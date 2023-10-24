@@ -1,22 +1,24 @@
 // @forward is used to split our styles into separate files or modules and make them available for import in other Sass files.
 @forward "./base/index";
 
+// @use rule loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together.
+@use "./util/index" as variable;
+
 // color variable declaration
-$header-bgcolor : rgba(0, 0, 0, 0.274);
-$main-bgcolor: rgba(233, 72, 72, 0.406);
-$footer-bgcolor: rgb(128, 215, 128);
-$para-font: 20px;
 
 header {
-    background-color: $header-bgcolor;
+    background-color: variable.$header-bgcolor;
 }
 
 nav {
     margin-top: 10px;
+
     ul {
         list-style-type: none;
-        li  {
+
+        li {
             display: inline-block;
+
             a {
                 display: inline-block;
                 text-decoration: none;
@@ -25,7 +27,8 @@ nav {
                 border-radius: 6px;
                 padding: 15px;
             }
-            a:hover{
+
+            a:hover {
                 background-color: rgb(11, 11, 11);
             }
         }
@@ -35,13 +38,13 @@ nav {
 
 
 main {
-    background-color: $main-bgcolor;
+    background-color: variable.$main-bgcolor;
 }
 
 #about p {
-    font-size: $para-font;
+    font-size: variable.$para-font;
 }
 
 footer {
-    background-color: $footer-bgcolor;
+    background-color: variable.$footer-bgcolor;
 }
